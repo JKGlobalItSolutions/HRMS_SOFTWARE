@@ -47,6 +47,7 @@
             max-width: 430px;
             width: 100%;
             padding: 30px;
+            margin: 10px;
             border-radius: 6px;
             background: #FFF;
             border: 2px solid #d8d8d8; /* Black border */
@@ -179,8 +180,8 @@
         /* Logo Container */
         .logo-container {
             position: absolute;
-            top: 10px; /* Adjust as needed */
-            left: 10px; /* Adjust as needed */
+            top: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
         }
 
         .logo {
@@ -196,11 +197,75 @@
                 transform: translateX(-50%);
             }
         }
+        
+        /* New Image Container */
+        .new-image-container {
+            position: absolute;
+            bottom: 10px; /* Adjust as needed */
+            left: 10px; /* Adjust as needed */
+        }
+
+        .new-image {
+            width: 250px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .logo-container {
+                position: absolute;
+                bottom: 100px; /* Adjust as needed */
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .new-image-container {
+                position: absolute;
+                bottom: 10px; /* Adjust as needed */
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+        /* New Image Container */
+        .new-image-container1 {
+            position: absolute;
+            bottom: 10px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */
+        }
+
+        .new-image1 {
+            width: 250px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .logo-container1 {
+                position: absolute;
+                bottom: 10px; /* Adjust as needed */
+                right: 50%;
+                transform: translateX(-50%);
+            }
+
+            .new-image-container1 {
+                position: absolute;
+                bottom: 10px; /* Adjust as needed */
+                right: 50%;
+                transform: translateX(-50%);
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="logo-container">
-        <img src="../images/logo.png" alt="Logo" class="logo">
+        <img src="./images/logo.png" alt="Logo" class="logo">
+    </div>
+    <!-- New Image -->
+    <div class="new-image-container">
+        <img src="./images/login-left-image.png" alt="New Image" class="new-image">
+    </div>
+    <div class="new-image-container1">
+        <img src="./images/login-right-image.png" alt="New Image" class="new-image1">
     </div>
     <section class="container forms">
         <div class="form login mx-2">
@@ -212,8 +277,8 @@
                     </div>
 
                     <div class="field input-field mb-3">
-                        <input type="password" placeholder="Password" class="form-control">
-                        <i class='bx bx-hide eye-icon'></i>
+                        <input type="password" placeholder="Password" class="form-control" id="password">
+                        <i class='bx bx-hide eye-icon' id="togglePassword"></i>
                     </div>
 
                     <div class="form-link mb-3">
@@ -232,6 +297,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
     
-    <script src="./js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const togglePassword = document.getElementById('togglePassword');
+            const password = document.getElementById('password');
+
+            togglePassword.addEventListener('click', function () {
+                // Toggle the type attribute
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                
+                // Toggle the icon
+                this.classList.toggle('bx-show');
+                this.classList.toggle('bx-hide');
+            });
+        });
+    </script>
 </body>
 </html>

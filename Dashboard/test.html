@@ -210,6 +210,10 @@
             .body-pd {
                 padding-left: calc(var(--nav-width) + 188px);
             }
+            .dropdown-menu-start {
+                    left: -100%;
+                    right: auto;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -218,15 +222,15 @@
 
 <body id="body-pd" style="background-color: #f7f9fa;">
     <header class="header" id="header">
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <a href=""><img style="justify-content: start;" src="../images/logo.png" width="100px" alt=""></a>
-        <a href=""></a>
-        <a href=""></a>
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> 
+            <a href="" ><img class="m-2 rounded" style="justify-content: start;" src="../images/logo.png" width="100px" alt=""></a>
+        </div>
+        
         <div class="dropdown">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownMenuButton" aria-expanded="false">
                 <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
             </a>
-            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownMenuButton">
+            <ul class="dropdown-menu text-small shadow dropdown-menu-start" aria-labelledby="dropdownMenuButton">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Sign out</a></li>

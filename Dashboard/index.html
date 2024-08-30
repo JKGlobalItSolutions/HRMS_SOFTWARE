@@ -52,6 +52,12 @@
             transition: .5s;
         }
 
+        .header_toggle {
+            color: var(--first-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         .header_img {
             width: 35px;
             height: 35px;
@@ -91,7 +97,7 @@
             width: var(--nav-width);
             height: 100vh;
             background-color: var(--first-color); /* Changed to red */
-            padding: 0 1rem 0 0;
+            padding: .5rem 1rem 0 0;
             transition: .5s;
             z-index: var(--z-fixed);
         }
@@ -205,21 +211,9 @@
                 padding-left: calc(var(--nav-width) + 188px);
             }
             .dropdown-menu-start {
-                left: -100%;
-                right: auto;
+                    left: -100%;
+                    right: auto;
             }
-        }
-
-        /* Styles for the toggle button */
-        .header_toggle {
-            color: #FFFFFF; /* White color */
-            font-size: 1.75rem; /* Bigger size */
-            font-weight: 700; /* Bold font weight */
-            display: flex; 
-            align-items: center;
-            /* justify-content: center; */
-            cursor: pointer;
-            transition: color 0.3s;
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -228,9 +222,10 @@
 
 <body id="body-pd" style="background-color: #f7f9fa;">
     <header class="header" id="header">
-        <div class="header_toggle "> <i class='bx bx-menu text-dark' id="header-toggle"></i> 
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> 
             <a href="" ><img class="m-2 rounded" style="justify-content: start;" src="../images/logo.png" width="100px" alt=""></a>
         </div>
+        
         <div class="dropdown">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownMenuButton" aria-expanded="false">
                 <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
@@ -245,19 +240,16 @@
     <div class="l-navbar show" id="nav-bar">
         <nav class="nav">
             <div> 
-                <a href="#" class="nav_logo "> 
+                <a href="#" class="nav_logo"> 
                     <img class='bx bx-layer nav_logo-icon d-none' src="../images/logo.png" alt=""> 
                     <span class="nav_logo-name"></span> 
                 </a>
-                <div class="nav_list "> 
-                    <a href="#" class="nav_link header_toggle  d-none "> 
-                        <i class='bx bx-menu' id="header-toggle"><span class="nav_name">Menu</span> </i>
-                    </a>
+                <div class="nav_list"> 
                     <a href="#" class="nav_link active"> 
                         <i class="fa-solid fa-house"></i> 
                         <span class="nav_name">Dashboard</span> 
                     </a> 
-                    <a href="#" class="nav_link"> 
+                    <a href="employee.html" class="nav_link"> 
                         <i class='bx bx-user nav_icon'></i> 
                         <span class="nav_name">Employee</span> 
                     </a> 
@@ -277,199 +269,17 @@
                         <i class="fa-solid fa-plus"></i>
                         <span class="nav_name">New Department</span> 
                     </a> 
-                    <a href="#" class="nav_link"> 
-                        <i class='bx bx-log-out nav_icon'></i> 
-                        <span class="nav_name">SignOut</span> 
-                    </a>
                 </div>
             </div> 
-
+            <a href="#" class="nav_link"> 
+                <i class='bx bx-log-out nav_icon'></i> 
+                <span class="nav_name">SignOut</span> 
+            </a>
         </nav>
     </div>
     <!--Container Main start-->
     <div class="main-content height-100 bg-light">
-        <div class="row">
-            <h1 class="mt-4">Create Employee</h1>
-            <div class="col-12 col-lg-6">
-                <div class="container-fluid">
-                    <div class="card mt-4">
-                        <div class="card-header">
-                            Employee Details
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="employeeName" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="employeeName" placeholder="Enter employee Name">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="employeePhone" class="form-label">Phone</label>
-                                        <input type="text" class="form-control" id="employeePhone" placeholder="Enter employee phone">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="dob" class="form-label">Date of Birth</label>
-                                        <input type="date" class="form-control" id="dob">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="gender" class="form-label">Gender</label>
-                                        <select id="gender" class="form-select">
-                                            <option selected>Male</option>
-                                            <option>Female</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="company@example.com">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-12">
-                                        <label for="address" class="form-label">Address</label>
-                                        <textarea class="form-control" id="address" rows="3" placeholder="Enter employee address"></textarea>
-                                    </div>
-                                </div>
-                            
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="container-fluid">
-                    <div class="card mt-4">
-                        <div class="card-header">
-                            Personal Details
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row mb-3">
-                                    <div class="col-md-12">
-                                        <label for="empId" class="form-label">Employee ID</label>
-                                        <input type="text" class="form-control" id="empId" value="#EMP000014" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="branch" class="form-label">Select Branch</label>
-                                        <select id="branch" class="form-select">
-                                            <option selected>Select Branch</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="department" class="form-label">Department</label>
-                                        <input type="text" class="form-control" id="department" placeholder="Department">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="designation" class="form-label">Select Designation</label>
-                                        <select id="designation" class="form-select">
-                                            <option selected>Select Designation</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="employeeCode" class="form-label">Employee Code</label>
-                                        <input type="text" class="form-control" id="employeeCode" placeholder="Enter Employee Code">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-12">
-                                        <label for="doj" class="form-label">Company Date Of Joining</label>
-                                        <input type="date" class="form-control" id="doj">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="container-fluid">
-                    <div class="card mt-4">
-                        <div class="card-header">
-                            Document
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row mb-3">
-                                    <div class="col-md-12">
-                                        <label for="empId" class="form-label">Certificate *</label>
-                                        <input type="file" class="form-control"   readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-12">
-                                        <label for="empId" class="form-label">Resume *</label>
-                                        <input type="file" class="form-control"   readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-12">
-                                        <label for="empId" class="form-label">Photo *</label>
-                                        <input type="file" class="form-control"   readonly>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="container-fluid">
-                    <div class="card mt-4">
-                        <div class="card-header">
-                            Bank Account Detail
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="empId" class="form-label">Account Holder Name</label>
-                                        <input type="text" class="form-control" id="empId" value="#EMP000014" readonly>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="empId" class="form-label">Account Number</label>
-                                        <input type="text" class="form-control" id="empId" value="#EMP000014" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="empId" class="form-label">Bank Name</label>
-                                        <input type="text" class="form-control" id="empId" value="#EMP000014" readonly>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="empId" class="form-label">Bank Identifier Code</label>
-                                        <input type="text" class="form-control" id="empId" value="#EMP000014" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="empId" class="form-label">Branch Location</label>
-                                        <input type="text" class="form-control" id="empId" value="#EMP000014" readonly>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="empId" class="form-label">Tax Payer Id</label>
-                                        <input type="text" class="form-control" id="empId" value="#EMP000014" readonly>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="submit d-flex justify-content-centre" style="align-items: end;">
-            <button type="submit" class="btn btn-primary" >Submit</button>
-        </div>
+        <h1>main content</h1>
     </div>
     <!--Container Main end-->
     <!-- Bootstrap JavaScript Libraries -->

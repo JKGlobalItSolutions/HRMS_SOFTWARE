@@ -17,7 +17,7 @@
     </div>
     <ul class="nav flex-column mt-2">
       <li class="nav-item my-1">
-        <a class="nav-link active  p-3" href="index.html">
+        <a class="nav-link   p-3" href="index.html">
           <img src="./img/sidbar icons/Dashboard Logo.png" style="padding: 2px;" height="20px" alt=""> Dashboard
         </a>
       </li>
@@ -37,7 +37,7 @@
         </a>
       </li>
       <li class="nav-item my-1 dropdown">
-        <a class="nav-link p-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link  p-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="./img/sidbar icons/department.png" style="padding: 2px;" height="20px" alt=""> Department
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -45,7 +45,7 @@
         </ul>
       </li>
       <li class="nav-item my-1">
-        <a class="nav-link p-3" href="Payroll.html">
+        <a class="nav-link active p-3" href="Payroll.html">
           <img src="./img/sidbar icons/Payroll.png" style="padding: 2px;" height="20px" alt="">
           Payroll
         </a>
@@ -67,9 +67,24 @@
       </div>
     </nav>
     
-    <div class="container mt-4">
-      <h1>Dashboard Content hello</h1>
-      <!-- Add your main content here -->
+    <div class="container">
+        <div class=" rounded-3">
+          <div class="d-flex justify-content-between px-3 align-items-end">
+            <div class="head-content">
+              <h3>Payroll</h3>
+              <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active text-danger" aria-current="page"><b>Home</b></li>
+                  <li class="breadcrumb-item active" aria-current="page">Payroll</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="button text-end m-2 mx-1 d-none" >
+                <a href="Add Employee.html"><button class="align-items-center text-end bg-danger text-light fw-bold  p-1 px-2  rounded" style="border: none;" data-bs-toggle="tooltip" data-bs-placement="right" title="CREATE" ><b><i class="fa-solid fa-filter"></i></b></button></a>
+            </div>
+          </div>
+          <!-- main content here  -->
+        </div>
     </div>
   </div>
 

@@ -93,3 +93,23 @@ body {
   right: 0;
   left: auto;
 }
+.custom-danger{
+  background-color: red;
+  color: white;
+}
+.table-container {
+  border: 1px solid #ff0000;
+  padding: 20px;
+}
+.table th, .table td {
+  vertical-align: middle;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+.action-btn {
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}

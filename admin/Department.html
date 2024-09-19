@@ -76,9 +76,42 @@
                 </ol>
               </nav>
             </div>
-            <div class="button text-end m-2 mx-1 " >
-                <a href="Add Employee.html"><button class="align-items-center text-end bg-danger text-light fw-bold  p-1 px-2  rounded" style="border: none;" data-bs-toggle="tooltip" data-bs-placement="right" title="CREATE" ><b><i class="fa-solid fa-filter"></i></b></button></a>
+            <!-- pop up form with button start  -->
+                         <!-- Button to trigger the modal -->
+            <div class="button text-end m-2 mx-1">
+              <button class="align-items-center text-end custom-danger text-light fw-bold p-1 px-2 rounded" 
+                      style="border: none;" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#addDepartmentModal" 
+                      data-bs-placement="right" 
+                      title="CREATE">
+                <b><i class="fa-solid fa-plus"></i></b>
+              </button>
             </div>
+            <!-- Modal structure for adding a new department -->
+            <div class="modal fade" id="addDepartmentModal" tabindex="-1" aria-labelledby="addDepartmentLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header custom-danger text-light">
+                    <h5 class="modal-title" id="addDepartmentLabel">New Department</h5>
+                    <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="departmentName" class="form-label">Department Name</label>
+                        <input type="text" class="form-control" id="departmentName" placeholder="Enter department name">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn custom-danger">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- pop up form with button end  -->
           </div>
           <div class="container my-2">
             <div class="row g-3">

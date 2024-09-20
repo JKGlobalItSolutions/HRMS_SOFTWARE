@@ -119,17 +119,31 @@
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
   
             <!-- Table Section -->
             <div class="table-container bg-white p-3 rounded">
-              <div class="d-flex justify-content-between mb-3">
-                <!-- Search Bar -->
-                <div class="input-group w-50">
-                  <input id="searchInput" type="text" class="form-control" placeholder="Search by Employee, Email, Branch, Department">
-                  <button class="btn btn-outline-danger" type="button">Search</button>
+                <div class="d-flex justify-content-between mb-3">
+
+                    <!-- Dropdown for Rows per Page -->
+                    <div class="d-flex align-items-center">
+                      <select id="rowsPerPage" class="form-select w-auto">
+                        <option value="all">All</option>
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                      </select>
+                      <label for="rowsPerPage" class="ms-2">Listings per page:</label>
+                    </div>
+      
+                    <!-- Search Bar -->
+                    <div class="input-group w-50">
+                      <input id="searchInput" type="text" class="form-control" placeholder="Search by Employee, Email, Branch, Department">
+                      <button class="btn btn-outline-danger" type="button">Search</button>
+                    </div>
+      
                 </div>
-              </div>
   
               <!-- Employee Table -->
               <div class="table-responsive">
@@ -212,42 +226,68 @@
                         <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
                       </td>
                     </tr>
+                    <tr>
+                      <td>#EMP0000001</td>
+                      <td>jaga</td>
+                      <td>jaga@armyspy.com</td>
+                      <td>india</td>
+                      <td>Health care</td>
+                      <td>Manager</td>
+                      <td>may 4, 2021</td>
+                      <td>
+                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
+                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
+                      </td>
+                    </tr>
                     <!-- Add more employee rows as needed -->
                   </tbody>
                 </table>
               </div>
             </div>
-          </div>
-  
-          <script>
-            // Search functionality
+        </div>
+
+        <!-- Add this code to your existing script section -->
+        <script>
+            // Variables to manage pagination
+            let currentPage = 1;
+            let rowsPerPage = parseInt(document.getElementById('rowsPerPage').value) || 10;
+        
+            // Event listeners
             document.getElementById('searchInput').addEventListener('input', function () {
-              filterTable();
+            currentPage = 1; // Reset to first page on search
+            filterTable();
             });
-  
-            // Filter by Month
+        
             document.getElementById('monthInput').addEventListener('change', function () {
-              filterTable();
+            currentPage = 1;
+            filterTable();
             });
-  
-            // Filter by Branch
+        
             document.getElementById('branchSelect').addEventListener('change', function () {
-              filterTable();
+            currentPage = 1;
+            filterTable();
             });
-  
-            // Filter by Department
+        
             document.getElementById('departmentSelect').addEventListener('change', function () {
-              filterTable();
+            currentPage = 1;
+            filterTable();
             });
-  
+        
+            document.getElementById('rowsPerPage').addEventListener('change', function () {
+            currentPage = 1; // Reset to first page on change
+            rowsPerPage = parseInt(this.value) || 10;
+            filterTable();
+            });
+        
             function filterTable() {
-              let searchInput = document.getElementById('searchInput').value.toLowerCase();
-              let monthFilter = document.getElementById('monthInput').value;
-              let branchFilter = document.getElementById('branchSelect').value.toLowerCase();
-              let departmentFilter = document.getElementById('departmentSelect').value.toLowerCase();
-              let rows = document.querySelectorAll('#employeeTable tr');
-  
-              rows.forEach((row) => {
+            let searchInput = document.getElementById('searchInput').value.toLowerCase();
+            let monthFilter = document.getElementById('monthInput').value;
+            let branchFilter = document.getElementById('branchSelect').value.toLowerCase();
+            let departmentFilter = document.getElementById('departmentSelect').value.toLowerCase();
+            let rows = document.querySelectorAll('#employeeTable tr');
+            let filteredRows = [];
+        
+            rows.forEach((row) => {
                 let cells = row.querySelectorAll('td');
                 let employeeID = cells[0].textContent.toLowerCase();
                 let name = cells[1].textContent.toLowerCase();
@@ -255,22 +295,41 @@
                 let branch = cells[3].textContent.toLowerCase();
                 let department = cells[4].textContent.toLowerCase();
                 let dateOfJoining = new Date(cells[6].textContent);
-  
+        
                 // Apply search and filter conditions
                 let matchesSearch = employeeID.includes(searchInput) || name.includes(searchInput) || email.includes(searchInput);
                 let matchesMonth = !monthFilter || (dateOfJoining.getMonth() + 1) === new Date(monthFilter).getMonth() + 1;
                 let matchesBranch = branchFilter === "all" || branch === branchFilter;
                 let matchesDepartment = departmentFilter === "all" || department === departmentFilter;
-  
+        
                 // Show or hide row based on filters
                 if (matchesSearch && matchesMonth && matchesBranch && matchesDepartment) {
-                  row.style.display = '';
+                row.style.display = '';
+                filteredRows.push(row); // Add row to filtered rows
                 } else {
-                  row.style.display = 'none';
+                row.style.display = 'none';
                 }
-              });
+            });
+        
+            // Pagination logic
+            let totalRows = filteredRows.length;
+            let totalPages = Math.ceil(totalRows / rowsPerPage);
+            
+            // Hide all rows and show only the selected page
+            filteredRows.forEach((row, index) => {
+                if (Math.floor(index / rowsPerPage) === currentPage - 1) {
+                row.style.display = ''; // Show the row
+                } else {
+                row.style.display = 'none'; // Hide the row
+                }
+            });
+            
+            // Additional: If needed, you can implement page navigation (previous/next buttons) here
             }
-          </script>
+        
+            // Initial call to display the correct rows on load
+            filterTable();
+        </script>
       </div>
     </div>
   </div>

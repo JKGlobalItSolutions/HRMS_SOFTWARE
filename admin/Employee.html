@@ -119,17 +119,70 @@
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
   
             <!-- Table Section -->
             <div class="table-container bg-white p-3 rounded">
-              <div class="d-flex justify-content-between mb-3">
-                <!-- Search Bar -->
-                <div class="input-group w-50">
-                  <input id="searchInput" type="text" class="form-control" placeholder="Search by Employee, Email, Branch, Department">
-                  <button class="btn btn-outline-danger" type="button">Search</button>
+              <div class="container">
+                <div class="row d-flex justify-content-between align-items-center mb-3">
+              
+                  <!-- Dropdown for Rows per Page -->
+                  <div class="col-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
+                    <label for="rowsPerPage" class="me-2 mb-0">Listings per page:</label>
+                    <select id="rowsPerPage" class="form-select w-auto">
+                      <option value="all">All</option>
+                      <option value="5">5</option>
+                      <option value="10" selected>10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                    </select>
+                  </div>
+              
+                  <!-- Search Bar -->
+                  <div class="col-12 col-md-6">
+                    <div class="input-group">
+                      <input id="searchInput" type="text" class="form-control" placeholder="Search by Employee, Email, Branch, Department">
+                      <button class="btn btn-outline-danger" type="button">Search</button>
+                      <!-- Refresh Button -->
+                      <button class="btn btn-outline-secondary mx-1 rounded mx-md-2" type="button" id="refreshButton">Reset</button>
+                    </div>
+                  </div>
+              
                 </div>
               </div>
+              
+
+                <!-- Button to trigger the delete confirmation modal -->
+                  <!-- Modal structure for delete confirmation -->
+                  <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header custom-danger text-light">
+                          <h5 class="modal-title" id="deleteConfirmationLabel">Delete Employee</h5>
+                          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Are you sure you want to delete this employee's details?</p>
+                          <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">No</button>
+                            <button type="button" class="btn custom-danger" id="yesButton">Yes</button>
+                          </div>
+                        </div>
+                        <div class="modal-footer" id="confirmSection" style="display:none;">
+                          <p class="me-auto text-danger">Click Confirm to proceed with deletion.</p>
+                          <button type="button" class="btn custom-danger" data-bs-dismiss="modal">Confirm</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- JavaScript to show Confirm button after clicking Yes -->
+                  <script>
+                    document.getElementById('yesButton').addEventListener('click', function() {
+                      document.getElementById('confirmSection').style.display = 'block';
+                    });
+                  </script>
+
   
               <!-- Employee Table -->
               <div class="table-responsive">
@@ -148,7 +201,7 @@
                   </thead>
                   <tbody id="employeeTable" class="text-center">
                     <tr>
-                      <td>#EMP0000001</td>
+                      <td><a href="EmployeeDetails.html" class="text-decoration-none text-dark">#EMP0000001</a></td>
                       <td>Julie Lynn</td>
                       <td>IsidroTJohnson@armyspy.com</td>
                       <td>China</td>
@@ -156,8 +209,8 @@
                       <td>Manager</td>
                       <td>Mar 4, 2020</td>
                       <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
+                        <a href="EditEmployee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -169,8 +222,8 @@
                       <td>Manager</td>
                       <td>Mar 4, 2020</td>
                       <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
+                        <a href="EditEmployee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -182,8 +235,8 @@
                       <td>Manager</td>
                       <td>Mar 4, 2020</td>
                       <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
+                        <a href="EditEmployee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -195,8 +248,8 @@
                       <td>Manager</td>
                       <td>june 4, 2021</td>
                       <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
+                        <a href="EditEmployee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
                       </td>
                     </tr>
                     <tr>
@@ -208,8 +261,21 @@
                       <td>Manager</td>
                       <td>may 4, 2021</td>
                       <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
+                        <a href="EditEmployee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#EMP0000001</td>
+                      <td>jaga</td>
+                      <td>jaga@armyspy.com</td>
+                      <td>india</td>
+                      <td>Health care</td>
+                      <td>Manager</td>
+                      <td>may 4, 2021</td>
+                      <td>
+                        <a href="EditEmployee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
                       </td>
                     </tr>
                     <!-- Add more employee rows as needed -->
@@ -217,60 +283,109 @@
                 </table>
               </div>
             </div>
-          </div>
-  
-          <script>
-            // Search functionality
-            document.getElementById('searchInput').addEventListener('input', function () {
-              filterTable();
+        </div>
+
+        <!-- Add this code to your existing script section -->
+        <script>
+          // Refresh button functionality
+          document.getElementById('refreshButton').addEventListener('click', function() {
+            // Clear the search input
+            document.getElementById('searchInput').value = '';
+            
+            // Reset the filters
+            document.getElementById('monthInput').value = '';
+            document.getElementById('branchSelect').value = 'all';
+            document.getElementById('departmentSelect').value = 'all';
+            document.getElementById('rowsPerPage').value = '10'; // Reset to default per page
+            
+            // Reset pagination and rowsPerPage
+            currentPage = 1;
+            rowsPerPage = 10;
+            
+            // Call filterTable to reset and reload all rows
+            filterTable();
+          });
+        
+          // Variables to manage pagination
+          let currentPage = 1;
+          let rowsPerPage = parseInt(document.getElementById('rowsPerPage').value) || 10;
+        
+          // Event listeners
+          document.getElementById('searchInput').addEventListener('input', function () {
+            currentPage = 1; // Reset to first page on search
+            filterTable();
+          });
+        
+          document.getElementById('monthInput').addEventListener('change', function () {
+            currentPage = 1;
+            filterTable();
+          });
+        
+          document.getElementById('branchSelect').addEventListener('change', function () {
+            currentPage = 1;
+            filterTable();
+          });
+        
+          document.getElementById('departmentSelect').addEventListener('change', function () {
+            currentPage = 1;
+            filterTable();
+          });
+        
+          document.getElementById('rowsPerPage').addEventListener('change', function () {
+            currentPage = 1; // Reset to first page on change
+            rowsPerPage = parseInt(this.value) || 10;
+            filterTable();
+          });
+        
+          function filterTable() {
+            let searchInput = document.getElementById('searchInput').value.toLowerCase();
+            let monthFilter = document.getElementById('monthInput').value;
+            let branchFilter = document.getElementById('branchSelect').value.toLowerCase();
+            let departmentFilter = document.getElementById('departmentSelect').value.toLowerCase();
+            let rows = document.querySelectorAll('#employeeTable tr');
+            let filteredRows = [];
+        
+            rows.forEach((row) => {
+              let cells = row.querySelectorAll('td');
+              let employeeID = cells[0].textContent.toLowerCase();
+              let name = cells[1].textContent.toLowerCase();
+              let email = cells[2].textContent.toLowerCase();
+              let branch = cells[3].textContent.toLowerCase();
+              let department = cells[4].textContent.toLowerCase();
+              let dateOfJoining = new Date(cells[6].textContent);
+        
+              // Apply search and filter conditions
+              let matchesSearch = employeeID.includes(searchInput) || name.includes(searchInput) || email.includes(searchInput);
+              let matchesMonth = !monthFilter || (dateOfJoining.getMonth() + 1) === new Date(monthFilter).getMonth() + 1;
+              let matchesBranch = branchFilter === "all" || branch === branchFilter;
+              let matchesDepartment = departmentFilter === "all" || department === departmentFilter;
+        
+              // Show or hide row based on filters
+              if (matchesSearch && matchesMonth && matchesBranch && matchesDepartment) {
+                row.style.display = '';
+                filteredRows.push(row); // Add row to filtered rows
+              } else {
+                row.style.display = 'none';
+              }
             });
-  
-            // Filter by Month
-            document.getElementById('monthInput').addEventListener('change', function () {
-              filterTable();
+        
+            // Pagination logic
+            let totalRows = filteredRows.length;
+            let totalPages = Math.ceil(totalRows / rowsPerPage);
+            
+            // Hide all rows and show only the selected page
+            filteredRows.forEach((row, index) => {
+              if (Math.floor(index / rowsPerPage) === currentPage - 1) {
+                row.style.display = ''; // Show the row
+              } else {
+                row.style.display = 'none'; // Hide the row
+              }
             });
-  
-            // Filter by Branch
-            document.getElementById('branchSelect').addEventListener('change', function () {
-              filterTable();
-            });
-  
-            // Filter by Department
-            document.getElementById('departmentSelect').addEventListener('change', function () {
-              filterTable();
-            });
-  
-            function filterTable() {
-              let searchInput = document.getElementById('searchInput').value.toLowerCase();
-              let monthFilter = document.getElementById('monthInput').value;
-              let branchFilter = document.getElementById('branchSelect').value.toLowerCase();
-              let departmentFilter = document.getElementById('departmentSelect').value.toLowerCase();
-              let rows = document.querySelectorAll('#employeeTable tr');
-  
-              rows.forEach((row) => {
-                let cells = row.querySelectorAll('td');
-                let employeeID = cells[0].textContent.toLowerCase();
-                let name = cells[1].textContent.toLowerCase();
-                let email = cells[2].textContent.toLowerCase();
-                let branch = cells[3].textContent.toLowerCase();
-                let department = cells[4].textContent.toLowerCase();
-                let dateOfJoining = new Date(cells[6].textContent);
-  
-                // Apply search and filter conditions
-                let matchesSearch = employeeID.includes(searchInput) || name.includes(searchInput) || email.includes(searchInput);
-                let matchesMonth = !monthFilter || (dateOfJoining.getMonth() + 1) === new Date(monthFilter).getMonth() + 1;
-                let matchesBranch = branchFilter === "all" || branch === branchFilter;
-                let matchesDepartment = departmentFilter === "all" || department === departmentFilter;
-  
-                // Show or hide row based on filters
-                if (matchesSearch && matchesMonth && matchesBranch && matchesDepartment) {
-                  row.style.display = '';
-                } else {
-                  row.style.display = 'none';
-                }
-              });
-            }
-          </script>
+          }
+        
+          // Initial call to display the correct rows on load
+          filterTable();
+        </script>
       </div>
     </div>
   </div>

@@ -165,7 +165,7 @@
                           <p>Are you sure you want to delete this employee's details?</p>
                           <div class="d-flex justify-content-end">
                             <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">No</button>
-                            <button type="button" class="btn custom-danger" id="yesButton">Yes</button>
+                            <button type="button" class="btn custom-danger" data-bs-dismiss="modal">Yes</button>
                           </div>
                         </div>
                         <div class="modal-footer" id="confirmSection" style="display:none;">
@@ -175,14 +175,6 @@
                       </div>
                     </div>
                   </div>
-
-                  <!-- JavaScript to show Confirm button after clicking Yes -->
-                  <script>
-                    document.getElementById('yesButton').addEventListener('click', function() {
-                      document.getElementById('confirmSection').style.display = 'block';
-                    });
-                  </script>
-
   
               <!-- Employee Table -->
               <div class="table-responsive">

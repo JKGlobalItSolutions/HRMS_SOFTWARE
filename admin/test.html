@@ -41,11 +41,13 @@
           <img src="./img/sidbar icons/department.png" style="padding: 2px;" height="20px" alt=""> Department
         </a>
       </li>
-      <li class="nav-item my-1">
-        <a class="nav-link p-3" href="Payroll.html">
-          <img src="./img/sidbar icons/Payroll.png" style="padding: 2px;" height="20px" alt="">
-          Payroll
+      <li class="nav-item my-1 dropdown">
+        <a class="nav-link p-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./img/sidbar icons/Payroll.png" style="padding: 2px;" height="20px" alt=""> Payroll
         </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="Payroll.html"><img src="./img/sidbar icons/Payroll.png" style="padding: 2px;" height="20px" alt="">Set Sallery</a></li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -64,275 +66,25 @@
       </div>
     </nav>
     
-    <div class="container-fluid">
-      <div class=" rounded-3">
-        <div class="d-flex justify-content-between px-3 align-items-end">
-          <div class="head-content">
-            <h3>Manage employees</h3>
-            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active text-danger" aria-current="page"><b>Home</b></li>
-                <li class="breadcrumb-item active" aria-current="page">Employee</li>
-              </ol>
-            </nav>
-          </div>
-          <div class="button text-end m-2 mx-1" >
-              <a href="Add Employee.html"><button class="align-items-center text-end bg-danger text-light fw-bold  p-1 px-2  rounded" style="border: none;" data-bs-toggle="tooltip" data-bs-placement="right" title="CREATE" ><b><i class="fa-solid fa-plus"></i></b></button></a>
-          </div>
-        </div>
-        <!-- Filter Section -->
-        <div class="container my-4">
-            <!-- New Filter Container -->
-            <div class="bg-white p-3 rounded mb-4 table-container">
-                <div class="row">
-                  <!-- Month Filter -->
-                  <div class="col-12 col-md-4 mb-3 mb-md-0">
-                    <div class="d-flex align-items-center">
-                      <label for="monthInput" class="me-2">Month:</label>
-                      <input id="monthInput" type="month" class="form-control w-100">
-                    </div>
-                  </div>
-    
-                  <!-- Branch Filter -->
-                  <div class="col-12 col-md-4 mb-3 mb-md-0">
-                    <div class="d-flex align-items-center">
-                      <label for="branchSelect" class="me-2">Branch:</label>
-                      <select id="branchSelect" class="form-select w-100">
-                        <option value="all">All</option>
-                        <option value="China">China</option>
-                        <option value="India">India</option>
-                        <option value="America">America</option>
-                      </select>
-                    </div>
-                  </div>
-    
-                  <!-- Department Filter -->
-                  <div class="col-12 col-md-4 mb-3 mb-md-0">
-                    <div class="d-flex align-items-center">
-                      <label for="departmentSelect" class="me-2">Department:</label>
-                      <select id="departmentSelect" class="form-select w-100">
-                        <option value="all">All</option>
-                        <option value="Industrials">Industrials</option>
-                        <option value="Health care">Health care</option>
-                        <option value="Technology">Technology</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+    <div class="container">
+        <div class=" rounded-3">
+          <div class="d-flex justify-content-between px-3 align-items-end">
+            <div class="head-content">
+              <h3>Payroll</h3>
+              <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active text-danger" aria-current="page"><b>Home</b></li>
+                  <li class="breadcrumb-item active" aria-current="page">Payroll</li>
+                </ol>
+              </nav>
             </div>
-  
-            <!-- Table Section -->
-            <div class="table-container bg-white p-3 rounded">
-                <div class="d-flex justify-content-between mb-3">
-
-                    <!-- Dropdown for Rows per Page -->
-                    <div class="d-flex align-items-center">
-                      <select id="rowsPerPage" class="form-select w-auto">
-                        <option value="all">All</option>
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                      </select>
-                      <label for="rowsPerPage" class="ms-2">Listings per page:</label>
-                    </div>
-      
-                    <!-- Search Bar -->
-                    <div class="input-group w-50">
-                      <input id="searchInput" type="text" class="form-control" placeholder="Search by Employee, Email, Branch, Department">
-                      <button class="btn btn-outline-danger" type="button">Search</button>
-                    </div>
-      
-                </div>
-  
-              <!-- Employee Table -->
-              <div class="table-responsive">
-                <table class="table table-hover table-bordered">
-                  <thead class="table-light text-center">
-                    <tr>
-                      <th>Employee ID</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Branch</th>
-                      <th>Department</th>
-                      <th>Designation</th>
-                      <th>Date of Joining</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody id="employeeTable" class="text-center">
-                    <tr>
-                      <td>#EMP0000001</td>
-                      <td>Julie Lynn</td>
-                      <td>IsidroTJohnson@armyspy.com</td>
-                      <td>China</td>
-                      <td>Industrials</td>
-                      <td>Manager</td>
-                      <td>Mar 4, 2020</td>
-                      <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#EMP0000001</td>
-                      <td>Julie Lynn</td>
-                      <td>IsidroTJohnson@armyspy.com</td>
-                      <td>China</td>
-                      <td>Industrials</td>
-                      <td>Manager</td>
-                      <td>Mar 4, 2020</td>
-                      <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#EMP0000001</td>
-                      <td>Julie Lynn</td>
-                      <td>IsidroTJohnson@armyspy.com</td>
-                      <td>China</td>
-                      <td>Health care</td>
-                      <td>Manager</td>
-                      <td>Mar 4, 2020</td>
-                      <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#EMP0000001</td>
-                      <td>raj</td>
-                      <td>raj.com</td>
-                      <td>america</td>
-                      <td>Technology</td>
-                      <td>Manager</td>
-                      <td>june 4, 2021</td>
-                      <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#EMP0000001</td>
-                      <td>jaga</td>
-                      <td>jaga@armyspy.com</td>
-                      <td>india</td>
-                      <td>Health care</td>
-                      <td>Manager</td>
-                      <td>may 4, 2021</td>
-                      <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#EMP0000001</td>
-                      <td>jaga</td>
-                      <td>jaga@armyspy.com</td>
-                      <td>india</td>
-                      <td>Health care</td>
-                      <td>Manager</td>
-                      <td>may 4, 2021</td>
-                      <td>
-                        <a href="Edit Employee.html"><button class="btn btn-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button></a>
-                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i></button>
-                      </td>
-                    </tr>
-                    <!-- Add more employee rows as needed -->
-                  </tbody>
-                </table>
-              </div>
+            <div class="button text-end m-2 mx-1 d-none" >
+                <a href="Add Employee.html"><button class="align-items-center text-end bg-danger text-light fw-bold  p-1 px-2  rounded" style="border: none;" data-bs-toggle="tooltip" data-bs-placement="right" title="CREATE" ><b><i class="fa-solid fa-filter"></i></b></button></a>
             </div>
+          </div>
+          <!-- main content here  -->
         </div>
-
-        <!-- Add this code to your existing script section -->
-        <script>
-            // Variables to manage pagination
-            let currentPage = 1;
-            let rowsPerPage = parseInt(document.getElementById('rowsPerPage').value) || 10;
-        
-            // Event listeners
-            document.getElementById('searchInput').addEventListener('input', function () {
-            currentPage = 1; // Reset to first page on search
-            filterTable();
-            });
-        
-            document.getElementById('monthInput').addEventListener('change', function () {
-            currentPage = 1;
-            filterTable();
-            });
-        
-            document.getElementById('branchSelect').addEventListener('change', function () {
-            currentPage = 1;
-            filterTable();
-            });
-        
-            document.getElementById('departmentSelect').addEventListener('change', function () {
-            currentPage = 1;
-            filterTable();
-            });
-        
-            document.getElementById('rowsPerPage').addEventListener('change', function () {
-            currentPage = 1; // Reset to first page on change
-            rowsPerPage = parseInt(this.value) || 10;
-            filterTable();
-            });
-        
-            function filterTable() {
-            let searchInput = document.getElementById('searchInput').value.toLowerCase();
-            let monthFilter = document.getElementById('monthInput').value;
-            let branchFilter = document.getElementById('branchSelect').value.toLowerCase();
-            let departmentFilter = document.getElementById('departmentSelect').value.toLowerCase();
-            let rows = document.querySelectorAll('#employeeTable tr');
-            let filteredRows = [];
-        
-            rows.forEach((row) => {
-                let cells = row.querySelectorAll('td');
-                let employeeID = cells[0].textContent.toLowerCase();
-                let name = cells[1].textContent.toLowerCase();
-                let email = cells[2].textContent.toLowerCase();
-                let branch = cells[3].textContent.toLowerCase();
-                let department = cells[4].textContent.toLowerCase();
-                let dateOfJoining = new Date(cells[6].textContent);
-        
-                // Apply search and filter conditions
-                let matchesSearch = employeeID.includes(searchInput) || name.includes(searchInput) || email.includes(searchInput);
-                let matchesMonth = !monthFilter || (dateOfJoining.getMonth() + 1) === new Date(monthFilter).getMonth() + 1;
-                let matchesBranch = branchFilter === "all" || branch === branchFilter;
-                let matchesDepartment = departmentFilter === "all" || department === departmentFilter;
-        
-                // Show or hide row based on filters
-                if (matchesSearch && matchesMonth && matchesBranch && matchesDepartment) {
-                row.style.display = '';
-                filteredRows.push(row); // Add row to filtered rows
-                } else {
-                row.style.display = 'none';
-                }
-            });
-        
-            // Pagination logic
-            let totalRows = filteredRows.length;
-            let totalPages = Math.ceil(totalRows / rowsPerPage);
-            
-            // Hide all rows and show only the selected page
-            filteredRows.forEach((row, index) => {
-                if (Math.floor(index / rowsPerPage) === currentPage - 1) {
-                row.style.display = ''; // Show the row
-                } else {
-                row.style.display = 'none'; // Hide the row
-                }
-            });
-            
-            // Additional: If needed, you can implement page navigation (previous/next buttons) here
-            }
-        
-            // Initial call to display the correct rows on load
-            filterTable();
-        </script>
-      </div>
     </div>
-    
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

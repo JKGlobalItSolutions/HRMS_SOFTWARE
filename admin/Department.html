@@ -25,16 +25,16 @@
 <body>
   <div class="sidebar">
     <div class="sidebar-logo">
-      <img src="./img/logo.png" alt="Logo" class="img-fluid">
+      <img src="./img/logo.png" alt="Logo">
     </div>
     <ul class="nav flex-column mt-2">
       <li class="nav-item my-1">
-        <a class="nav-link p-3" href="index.html">
+        <a class="nav-link   p-3" href="index.html">
           <img src="./img/sidbar icons/Dashboard Logo.png" style="padding: 2px;" height="20px" alt=""> Dashboard
         </a>
       </li>
       <li class="nav-item my-1">
-        <a class="nav-link p-3" href="Employee.html">
+        <a class="nav-link active p-3" href="Employee.html">
           <img src="./img/sidbar icons/Employee Logo.png" style="padding: 2px;" height="20px" alt=""> Employee
         </a>
       </li>
@@ -49,14 +49,17 @@
         </a>
       </li>
       <li class="nav-item my-1">
-        <a class="nav-link active p-3" href="Department.html">
+        <a class="nav-link p-3" href="Department.html">
           <img src="./img/sidbar icons/department.png" style="padding: 2px;" height="20px" alt=""> Department
         </a>
       </li>
-      <li class="nav-item my-1">
-        <a class="nav-link p-3" href="Payroll.html">
+      <li class="nav-item my-1 dropdown">
+        <a class="nav-link p-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="./img/sidbar icons/Payroll.png" style="padding: 2px;" height="20px" alt=""> Payroll
         </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="Payroll.html"><img src="./img/sidbar icons/Payroll.png" style="padding: 2px;" height="20px" alt="">Set Sallery</a></li>
+        </ul>
       </li>
     </ul>
   </div>

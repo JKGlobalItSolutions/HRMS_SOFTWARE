@@ -6,18 +6,18 @@
   <title>Admin Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <!-- Bootstrap CSS v5.3.2 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="sidebar">
     <div class="sidebar-logo">
-      <img src="./img/logo.png"  alt="Logo">
+      <img src="./img/logo.png" alt="Logo">
     </div>
     <ul class="nav flex-column mt-2">
       <li class="nav-item my-1">
-        <a class="nav-link p-3" href="index.html">
+        <a class="nav-link   p-3" href="index.html">
           <img src="./img/sidbar icons/Dashboard Logo.png" style="padding: 2px;" height="20px" alt=""> Dashboard
         </a>
       </li>
@@ -32,7 +32,7 @@
         </a>
       </li>
       <li class="nav-item my-1">
-        <a class="nav-link active p-3" href="leave.html">
+        <a class="nav-link p-3" href="leave.html">
           <img src="./img/sidbar icons/leave.png" style="padding: 2px;" height="20px" alt=""> Leave
         </a>
       </li>
@@ -42,13 +42,13 @@
         </a>
       </li>
       <li class="nav-item my-1 dropdown">
-        <a class="nav-link p-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link active p-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="./img/sidbar icons/Payroll.png" style="padding: 2px;" height="20px" alt=""> Payroll
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="Payroll.html"><img src="./img/sidbar icons/Ellipse 15.png" style="margin: 5px; padding: 3px;" height="20px" alt="">Employee Salary</a></li>
-          <li><a class="dropdown-item" href="Payslip.html"><img src="./img/sidbar icons/Ellipse 15.png" style="margin: 5px; padding: 3px;" height="20px" alt="">Payslip</a></li>
-        </ul>
+            <li><a class="dropdown-item" href="Payroll.html"><img src="./img/sidbar icons/Ellipse 15.png" style="margin: 5px; padding: 3px;" height="20px" alt="">Employee Salary</a></li>
+            <li><a class="dropdown-item" href="Payslip.html"><img src="./img/sidbar icons/Ellipse 15.png" style="margin: 5px; padding: 3px;" height="20px" alt="">Payslip</a></li>
+          </ul>
       </li>
     </ul>
   </div>
@@ -67,27 +67,27 @@
       </div>
     </nav>
     
-    <div class="container-fluid">
-        <div class="rounded-3">
+    <div class="container">
+        <div class=" rounded-3">
           <div class="d-flex justify-content-between px-3 align-items-end">
             <div class="head-content">
-                <h3>Manage Leave</h3>
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item active text-danger" aria-current="page"><b>Home</b></li>
-                    <li class="breadcrumb-item active" aria-current="page">Manage Leave</li>
-                  </ol>
-                </nav>
+              <h3>Payroll</h3>
+              <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active text-danger" aria-current="page"><b>Home</b></li>
+                  <li class="breadcrumb-item active" aria-current="page">Payroll</li>
+                </ol>
+              </nav>
             </div>
-            <div class="button text-end m-2 mx-1">
-                <button class="align-items-center text-end bg-danger text-light fw-bold  p-1 px-2  rounded" style="border: none;" data-bs-toggle="modal" data-bs-target="#createLeaveModal" title="CREATE"><b><i class="fa-solid fa-plus"></i></b></button>
+            <div class="button text-end m-2 mx-1 d-none" >
+                <a href="Add Employee.html"><button class="align-items-center text-end bg-danger text-light fw-bold  p-1 px-2  rounded" style="border: none;" data-bs-toggle="tooltip" data-bs-placement="right" title="CREATE" ><b><i class="fa-solid fa-filter"></i></b></button></a>
             </div>
           </div>
-
           <div class="container my-4">
             <div class="table-container p-3 rounded">
               <div class="row d-flex justify-content-between align-items-center mb-2">
                 <div class="col-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
+                    <label for="rowsPerPage" class="me-2">Listings per page:</label>
                     <select id="rowsPerPage" class="form-select w-auto">
                         <option value="all">All</option>
                         <option value="5">5</option>
@@ -95,9 +95,8 @@
                         <option value="15">15</option>
                         <option value="20">20</option>
                     </select>
-                    <label for="rowsPerPage" class="ms-2">Listings per page:</label>
                 </div>
-                <div class="col-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
+                <div class="col-12 col-md-6">
                   <div class="input-group">
                     <input id="searchInput" type="text" class="form-control" placeholder="Search in all columns (Employee, Status, Clock In, Clock Out)">
                     <button class="btn btn-outline-danger" type="button">Search</button>
@@ -109,136 +108,93 @@
                 <table class="table table-bordered text-center">
                   <thead>
                     <tr>
-                        <th scope="col">EMPLOYE</th>
-                        <th scope="col">LEAVE TYPE</th>
-                        <th scope="col">APPLIED ON</th>
-                        <th scope="col">START DATE</th>
-                        <th scope="col">END DATE</th>
-                        <th scope="col">TOTAL DAYS</th>
-                        <th scope="col">LEAVE REASON</th>
-                        <th scope="col">STATUS</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">EMPLOYE ID</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">PAYROLL TYPE</th>
+                        <th scope="col">SALARY</th>
+                        <th scope="col">NET SALARY</th>
+                        <th scope="col">ACTION</th>
                     </tr>
                   </thead>
                   <tbody id="attendanceTable">
                     <tr>
+                        <td>EMP01</td>
                         <td>Elumalai</td>
-                        <td>Casual Leave</td>
                         <td>Mar 4,2023</td>
                         <td>Mar 3,2024</td>
                         <td>Mar 5,2024</td>
-                        <td>3</td>
-                        <td>Personal reason</td>
-                        <td><button class="btn btn-danger rounded p-1 px-3">Reject</button></td>
                         <td>
-                            <button class="btn btn-dark btn-sm" title="Manage Leave" data-bs-toggle="modal" data-bs-target="#leaveActionModal"><i class="bi bi-arrow-right"></i></button>
-                            <button class="btn btn-secondary btn-sm" title="Edit" data-bs-toggle="modal" data-bs-target="#editLeaveModal"><i class="bi bi-pencil-fill"></i></button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
+                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
                         </td>
                     </tr>
                     <tr>
+                        <td>EMP02</td>
                         <td>jaga</td>
-                        <td>Casual Leave</td>
                         <td>Mar 4,2023</td>
                         <td>Mar 3,2024</td>
                         <td>Mar 5,2024</td>
-                        <td>3</td>
-                        <td>Personal reason</td>
-                        <td><button class="btn btn-danger rounded p-1 px-3">Reject</button></td>
                         <td>
-                            <button class="btn btn-dark btn-sm" title="Manage Leave" data-bs-toggle="modal" data-bs-target="#leaveActionModal"><i class="bi bi-arrow-right"></i></button>
-                            <button class="btn btn-secondary btn-sm" title="Edit" data-bs-toggle="modal" data-bs-target="#editLeaveModal"><i class="bi bi-pencil-fill"></i></button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
+                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
                         </td>
                     </tr>
                     <tr>
+                        <td>EMP03</td>
                         <td>rajkumar</td>
-                        <td>Casual Leave</td>
                         <td>Mar 4,2023</td>
                         <td>Mar 3,2024</td>
                         <td>Mar 5,2024</td>
-                        <td>3</td>
-                        <td>external reason</td>
-                        <td><button class="btn btn-danger rounded p-1 px-3">Reject</button></td>
                         <td>
-                            <button class="btn btn-dark btn-sm" title="Manage Leave" data-bs-toggle="modal" data-bs-target="#leaveActionModal"><i class="bi bi-arrow-right"></i></button>
-                            <button class="btn btn-secondary btn-sm" title="Edit" data-bs-toggle="modal" data-bs-target="#editLeaveModal"><i class="bi bi-pencil-fill"></i></button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
+                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
                         </td>
                     </tr>
                     <tr>
+                        <td>EMP04</td>
                         <td>rajkumar</td>
-                        <td>Casual Leave</td>
                         <td>Mar 4,2023</td>
                         <td>Mar 3,2024</td>
                         <td>Mar 5,2024</td>
-                        <td>3</td>
-                        <td>external reason</td>
-                        <td><button class="btn btn-danger rounded p-1 px-3">Reject</button></td>
                         <td>
-                            <button class="btn btn-dark btn-sm" title="Manage Leave" data-bs-toggle="modal" data-bs-target="#leaveActionModal"><i class="bi bi-arrow-right"></i></button>
-                            <button class="btn btn-secondary btn-sm" title="Edit" data-bs-toggle="modal" data-bs-target="#editLeaveModal"><i class="bi bi-pencil-fill"></i></button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
+                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
                         </td>
                     </tr>
                     <tr>
+                        <td>EMP05</td>
                         <td>rajkumar</td>
-                        <td>Casual Leave</td>
                         <td>Mar 4,2023</td>
                         <td>Mar 3,2024</td>
                         <td>Mar 5,2024</td>
-                        <td>3</td>
-                        <td>external reason</td>
-                        <td><button class="btn btn-danger rounded p-1 px-3">Reject</button></td>
                         <td>
-                            <button class="btn btn-dark btn-sm" title="Manage Leave" data-bs-toggle="modal" data-bs-target="#leaveActionModal"><i class="bi bi-arrow-right"></i></button>
-                            <button class="btn btn-secondary btn-sm" title="Edit" data-bs-toggle="modal" data-bs-target="#editLeaveModal"><i class="bi bi-pencil-fill"></i></button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
+                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
                         </td>
                     </tr>
                     <tr>
+                        <td>EMP06</td>
                         <td>rajkumar</td>
-                        <td>Casual Leave</td>
                         <td>Mar 4,2023</td>
                         <td>Mar 3,2024</td>
                         <td>Mar 5,2024</td>
-                        <td>3</td>
-                        <td>external reason</td>
-                        <td><button class="btn btn-danger rounded p-1 px-3">Reject</button></td>
                         <td>
-                            <button class="btn btn-dark btn-sm" title="Manage Leave" data-bs-toggle="modal" data-bs-target="#leaveActionModal"><i class="bi bi-arrow-right"></i></button>
-                            <button class="btn btn-secondary btn-sm" title="Edit" data-bs-toggle="modal" data-bs-target="#editLeaveModal"><i class="bi bi-pencil-fill"></i></button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
+                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
                         </td>
                     </tr>
                     <tr>
+                        <td>EMP06</td>
                         <td>rajkumar</td>
-                        <td>Casual Leave</td>
                         <td>Mar 4,2023</td>
                         <td>Mar 3,2024</td>
                         <td>Mar 5,2024</td>
-                        <td>3</td>
-                        <td>external reason</td>
-                        <td><button class="btn btn-danger rounded p-1 px-3">Reject</button></td>
                         <td>
-                            <button class="btn btn-dark btn-sm" title="Manage Leave" data-bs-toggle="modal" data-bs-target="#leaveActionModal"><i class="bi bi-arrow-right"></i></button>
-                            <button class="btn btn-secondary btn-sm" title="Edit" data-bs-toggle="modal" data-bs-target="#editLeaveModal"><i class="bi bi-pencil-fill"></i></button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
+                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
                         </td>
                     </tr>
                     <tr>
+                        <td>EMP07</td>
                         <td>rajkumar</td>
-                        <td>personal Leave</td>
                         <td>Mar 4,2023</td>
                         <td>Mar 3,2024</td>
-                        <td>Mar 5,2025</td>
-                        <td>3</td>
-                        <td>external reason</td>
-                        <td><button class="btn btn-danger rounded p-1 px-3">Reject</button></td>
+                        <td>Mar 5,2024</td>
                         <td>
-                            <button class="btn btn-dark btn-sm" title="Manage Leave" data-bs-toggle="modal" data-bs-target="#leaveActionModal"><i class="bi bi-arrow-right"></i></button>
-                            <button class="btn btn-secondary btn-sm" title="Edit" data-bs-toggle="modal" data-bs-target="#editLeaveModal"><i class="bi bi-pencil-fill"></i></button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-bs-placement="right" title="DELETE"><i class="bi bi-trash-fill"></i></button>
+                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
                         </td>
                     </tr>
                     <!-- More rows... -->
@@ -485,7 +441,7 @@
             });
           </script>
         </div>
-      </div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

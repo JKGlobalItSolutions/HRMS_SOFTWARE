@@ -83,243 +83,209 @@
                 <a href="Add Employee.html"><button class="align-items-center text-end bg-danger text-light fw-bold  p-1 px-2  rounded" style="border: none;" data-bs-toggle="tooltip" data-bs-placement="right" title="CREATE" ><b><i class="fa-solid fa-filter"></i></b></button></a>
             </div>
           </div>
-          <div class="container my-4">
-            <div class="table-container p-3 rounded">
-              <div class="row d-flex justify-content-between align-items-center mb-2">
-                <div class="col-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
-                    <label for="rowsPerPage" class="me-2">Listings per page:</label>
-                    <select id="rowsPerPage" class="form-select w-auto">
-                        <option value="all">All</option>
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                    </select>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="input-group">
-                    <input id="searchInput" type="text" class="form-control" placeholder="Search in all columns (Employee, Status, Clock In, Clock Out)">
-                    <button class="btn btn-outline-danger" type="button">Search</button>
+
+          <div class="container my-2">
+            <div class="row g-4">
+              <!-- Employee Salary Panel -->
+              <div class="col-12 col-lg-6">
+                <div class="card h-100">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Employee Salary</h5>
+                    <button class="btn btn-danger btn-sm">
+                      <i class="bi bi-plus-lg"></i> <!-- Add icon -->
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Payslip Type:</strong> Salary</p>
+                    <p><strong>Monthly Payslip:</strong> ₹1000</p>
+                    <p><strong>Account Type:</strong> Chisom Latifat</p>
                   </div>
                 </div>
               </div>
-      
-              <div class="table-responsive">
-                <table class="table table-bordered text-center">
-                  <thead>
-                    <tr>
-                        <th scope="col">EMPLOYE ID</th>
-                        <th scope="col">NAME</th>
-                        <th scope="col">PAYROLL TYPE</th>
-                        <th scope="col">SALARY</th>
-                        <th scope="col">NET SALARY</th>
-                        <th scope="col">ACTION</th>
-                    </tr>
-                  </thead>
-                  <tbody id="attendanceTable">
-                    <tr>
-                        <td>EMP01</td>
-                        <td>Elumalai</td>
-                        <td>Mar 4,2023</td>
-                        <td>Mar 3,2024</td>
-                        <td>Mar 5,2024</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>EMP02</td>
-                        <td>jaga</td>
-                        <td>Mar 4,2023</td>
-                        <td>Mar 3,2024</td>
-                        <td>Mar 5,2024</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>EMP03</td>
-                        <td>rajkumar</td>
-                        <td>Mar 4,2023</td>
-                        <td>Mar 3,2024</td>
-                        <td>Mar 5,2024</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>EMP04</td>
-                        <td>rajkumar</td>
-                        <td>Mar 4,2023</td>
-                        <td>Mar 3,2024</td>
-                        <td>Mar 5,2024</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>EMP05</td>
-                        <td>rajkumar</td>
-                        <td>Mar 4,2023</td>
-                        <td>Mar 3,2024</td>
-                        <td>Mar 5,2024</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>EMP06</td>
-                        <td>rajkumar</td>
-                        <td>Mar 4,2023</td>
-                        <td>Mar 3,2024</td>
-                        <td>Mar 5,2024</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>EMP06</td>
-                        <td>rajkumar</td>
-                        <td>Mar 4,2023</td>
-                        <td>Mar 3,2024</td>
-                        <td>Mar 5,2024</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>EMP07</td>
-                        <td>rajkumar</td>
-                        <td>Mar 4,2023</td>
-                        <td>Mar 3,2024</td>
-                        <td>Mar 5,2024</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" title="Manage Leave" ><i class="bi bi-eye"></i></button>
-                        </td>
-                    </tr>
-                    <!-- More rows... -->
-                  </tbody>
-                </table>
+        
+              <!-- Allowance Table Panel -->
+              <div class="col-12 col-lg-6">
+                <div class="card h-100">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Allowance</h5>
+                    <button class="btn btn-danger btn-sm">
+                      <i class="bi bi-plus-lg"></i> <!-- Add icon -->
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-sm w-100">
+                        <thead class="table-light">
+                          <tr>
+                            <th>EMPLOYEE NAME</th>
+                            <th>ALLOWANCE OPTION</th>
+                            <th>TITLE</th>
+                            <th>TYPE</th>
+                            <th>AMOUNT</th>
+                            <th>ACTION</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Elumalai</td>
+                            <td>Taxable</td>
+                            <td>Quis Aliqua Molesti</td>
+                            <td>Fixed</td>
+                            <td>₹1,482</td>
+                            <td>
+                              <button class="btn btn-danger btn-sm me-2">
+                                <i class="bi bi-pencil-fill"></i>
+                              </button>
+                              <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash-fill"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Elumalai</td>
+                            <td>Non Taxable</td>
+                            <td>Quis Aliqua Molesti</td>
+                            <td>Fixed</td>
+                            <td>₹542</td>
+                            <td>
+                              <button class="btn btn-danger btn-sm me-2">
+                                <i class="bi bi-pencil-fill"></i>
+                              </button>
+                              <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash-fill"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <!-- Other Payment Table Panel -->
+            <div class="col-12 col-lg-6">
+                <div class="card h-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Other Payment</h5>
+                    <button class="btn btn-danger btn-sm">
+                    <i class="bi bi-plus-lg"></i> <!-- Add icon -->
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                    <table class="table table-bordered table-sm w-100">
+                        <thead class="table-light">
+                        <tr>
+                            <th>EMPLOYEE</th>
+                            <th>TITLE</th>
+                            <th>TYPE</th>
+                            <th>AMOUNT</th>
+                            <th>ACTION</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Elumalai</td>
+                            <td>Quia Occaecat Laboru</td>
+                            <td>Fixed</td>
+                            <td>₹3,484</td>
+                            <td>
+                            <button class="btn btn-danger btn-sm me-2">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Elumalai</td>
+                            <td>Deleniti Exercitatio</td>
+                            <td>Fixed</td>
+                            <td>₹574</td>
+                            <td>
+                            <button class="btn btn-danger btn-sm me-2">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Overtime Table Panel -->
+            <div class="col-12 col-lg-6">
+                <div class="card h-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Overtime</h5>
+                    <button class="btn btn-danger btn-sm">
+                    <i class="bi bi-plus-lg"></i> <!-- Add icon -->
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                    <table class="table table-bordered table-sm w-100">
+                        <thead class="table-light">
+                        <tr>
+                            <th>EMPLOYEE NAME</th>
+                            <th>OVERTIME TITLE</th>
+                            <th>NUMBER OF DAYS</th>
+                            <th>HOURS</th>
+                            <th>RATE</th>
+                            <th>ACTION</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Elumalai</td>
+                            <td>test</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>₹846</td>
+                            <td>
+                            <button class="btn btn-danger btn-sm me-2">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Elumalai</td>
+                            <td>Dolorem dolor rem no</td>
+                            <td>70</td>
+                            <td>78</td>
+                            <td>₹523</td>
+                            <td>
+                            <button class="btn btn-danger btn-sm me-2">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+  
+  
             </div>
           </div>
 
-          <!-- Modal structure for Leave Action start  -->
-          <!-- Modal structure for Leave Action with two-column responsive layout -->
-          <div class="modal fade" id="leaveActionModal" tabindex="-1" aria-labelledby="leaveActionLabel" aria-hidden="true">
-              <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                  <h5 class="modal-title" id="leaveActionLabel">Leave Action</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                  <form>
-                      <div class="row">
-                      <!-- Employee and Leave Type (First Row) -->
-                      <div class="col-md-6 mb-3">
-                          <label for="employeeName" class="form-label">Employee</label>
-                          <input type="text" class="form-control" id="employeeName" value="Julie Lynn" readonly>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                          <label for="leaveType" class="form-label">Leave Type</label>
-                          <input type="text" class="form-control" id="leaveType" value="Casual Leave" readonly>
-                      </div>
+
           
-                      <!-- Applied On and Start Date (Second Row) -->
-                      <div class="col-md-6 mb-3">
-                          <label for="appliedOn" class="form-label">Applied On</label>
-                          <input type="date" class="form-control" id="appliedOn" value="2023-03-04" readonly>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                          <label for="startDate" class="form-label">Start Date</label>
-                          <input type="date" class="form-control" id="startDate" value="2023-03-03" readonly>
-                      </div>
-          
-                      <!-- End Date and Status (Third Row) -->
-                      <div class="col-md-6 mb-3">
-                          <label for="endDate" class="form-label">End Date</label>
-                          <input type="date" class="form-control" id="endDate" value="2023-03-05" readonly>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                          <label for="status" class="form-label">Status</label>
-                          <input type="text" class="form-control" id="status" value="Reject" readonly>
-                      </div>
-          
-                      <!-- Leave Reason (Fourth Row) -->
-                      <div class="col-md-12 mb-3">
-                          <label for="leaveReason" class="form-label">Leave Reason</label>
-                          <textarea class="form-control" id="leaveReason" rows="2" readonly>Lorem Ipsum, Or Lipsum</textarea>
-                      </div>
-                      </div>
-                  </form>
-                  </div>
-                  <div class="modal-footer">
-                  <button type="button" class="btn btn-success" id="approveButton">Approve</button>
-                  <button type="button" class="btn btn-danger" id="rejectButton">Reject</button>
-                  </div>
-              </div>
-              </div>
-          </div>
-          <!-- Modal structure for Leave Action end  -->
-          <!-- Modal structure for Edit Leave  start-->
-          <div class="modal fade" id="editLeaveModal" tabindex="-1" aria-labelledby="editLeaveLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="editLeaveLabel">Edit Leave</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <!-- Employee Field (without AI button) -->
-                      <div class="mb-3">
-                        <label for="employeeName" class="form-label">Employee</label>
-                        <input type="text" class="form-control" id="employeeName" value="Julie Lynn" readonly>
-                      </div>
-            
-                      <!-- Leave Type Field -->
-                      <div class="mb-3">
-                        <label for="leaveType" class="form-label">Leave Type*</label>
-                        <select class="form-select" id="leaveType">
-                          <option value="1" selected>Casual Leave (0/6)</option>
-                          <!-- Add more options if needed -->
-                        </select>
-                      </div>
-            
-                      <!-- Start Date and End Date Fields (Two Columns) -->
-                      <div class="row mb-3">
-                        <div class="col-md-6">
-                          <label for="startDate" class="form-label">Start Date</label>
-                          <input type="date" class="form-control" id="startDate" value="2023-03-03">
-                        </div>
-                        <div class="col-md-6">
-                          <label for="endDate" class="form-label">End Date</label>
-                          <input type="date" class="form-control" id="endDate" value="2023-03-05">
-                        </div>
-                      </div>
-            
-                      <!-- Leave Reason Text Area -->
-                      <div class="mb-3">
-                        <label for="leaveReason" class="form-label">Leave Reason</label>
-                        <textarea class="form-control" id="leaveReason" rows="2">Lorem Ipsum, Or Lipsum</textarea>
-                      </div>
-            
-                      <!-- Remark Field (without Grammar check with AI label) -->
-                      <div class="mb-3">
-                        <label for="remark" class="form-label">Remark</label>
-                        <textarea class="form-control" id="remark" rows="2">Lorem Ipsum, Or Lipsum</textarea>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Update</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!-- Modal structure for Edit Leave end  -->
           <!-- Modal structure for delete confirmation start -->
           <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -343,72 +309,6 @@
               </div>
           </div>
           <!-- Modal structure for delete confirmation delete -->
-          <!-- Modal structure for Create New Leave start -->
-          <div class="modal fade" id="createLeaveModal" tabindex="-1" aria-labelledby="createLeaveLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="createLeaveLabel">Create New Leave</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                      <form>
-                          <!-- Employee Selection -->
-                          <div class="mb-3">
-                          <label for="employeeSelect" class="form-label">Employee</label>
-                          <select class="form-select" id="employeeSelect">
-                              <option selected>Select Employee</option>
-                              <option value="1">John Doe</option>
-                              <option value="2">Jane Smith</option>
-                              <!-- Add more employee options as needed -->
-                          </select>
-                          </div>
-              
-                          <!-- Leave Type Selection -->
-                          <div class="mb-3">
-                          <label for="leaveType" class="form-label">Leave Type*</label>
-                          <select class="form-select" id="leaveType">
-                              <option selected>Select Leave Type</option>
-                              <option value="casual">Casual Leave</option>
-                              <option value="sick">Sick Leave</option>
-                              <!-- Add more leave type options as needed -->
-                          </select>
-                          </div>
-              
-                          <!-- Start Date and End Date Fields (Two Columns) -->
-                          <div class="row mb-3">
-                          <div class="col-md-6">
-                              <label for="startDate" class="form-label">Start Date</label>
-                              <input type="date" class="form-control" id="startDate" value="2024-09-21">
-                          </div>
-                          <div class="col-md-6">
-                              <label for="endDate" class="form-label">End Date</label>
-                              <input type="date" class="form-control" id="endDate" value="2024-09-21">
-                          </div>
-                          </div>
-              
-                          <!-- Leave Reason Text Area -->
-                          <div class="mb-3">
-                          <label for="leaveReason" class="form-label">Leave Reason</label>
-                          <textarea class="form-control" id="leaveReason" rows="2" placeholder="Leave Reason"></textarea>
-                          </div>
-              
-                          <!-- Remark Text Area (without Grammar check with AI label) -->
-                          <div class="mb-3">
-                          <label for="remark" class="form-label">Remark</label>
-                          <textarea class="form-control" id="remark" rows="2" placeholder="Leave Remark"></textarea>
-                          </div>
-          
-                      </form>
-                      </div>
-                      <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-success">Create</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!-- Modal structure for Create New Leave end -->
           <script>
             document.getElementById('searchInput').addEventListener('input', function () {
               let filter = this.value.toLowerCase();

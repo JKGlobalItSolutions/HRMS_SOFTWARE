@@ -89,7 +89,7 @@
           <div class="container">
             <div class="row mb-3 justify-content-center align-items-center">
               <div class="col-12 col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
-                <h5 class="ms-2 fw-bold">Find Employee Payslip</h5>
+                <h5 class="ms-2">Find Employee Payslip</h5>
               </div>
               <div class="col-12 col-lg-6">
                 <div class="row text-center justify-content-center justify-content-lg-end">
@@ -226,7 +226,7 @@
                 <div class="modal-content">
                     <div class="modal-header d-flex align-items-center">
                         <!-- Logo at the top left -->
-                        <img src="./img/logo.png" alt="Logo" class="me-3" style="width: 60px; height: auto;"> <!-- Reduced width for smaller screens -->
+                        <img src="./img/logo.png" alt="Logo" class="me-3" style="width: 80px; height: auto;">
                         <h5 class="modal-title" id="payslipModalLabel">Employee Payslip</h5>
                         <!-- Download button at the top right -->
                         <button class="btn btn-danger btn-sm ms-auto me-2" title="Download Payslip">
@@ -236,12 +236,12 @@
                     </div>
                     <div class="modal-body">
                         <div class="row mb-3">
-                            <div class="col-12 col-md-6"> <!-- Adjust columns to stack in small screens -->
+                            <div class="col-md-6">
                                 <h6>Name: John Doe</h6>
                                 <h6>Position: Chartered Accountant</h6>
                                 <h6>Salary Date: Sep 26, 2024</h6>
                             </div>
-                            <div class="col-12 col-md-6 text-md-end text-start"> <!-- Stack text for small screens -->
+                            <div class="col-md-6 text-end">
                                 <h6>HRMGO</h6>
                                 <h6>Gulshan, Karachi</h6>
                                 <h6>Salary Slip #2024-09</h6>
@@ -249,94 +249,89 @@
                         </div>
         
                         <!-- Earning Table -->
-                        <div class="table-responsive"> <!-- Added responsiveness to the table -->
-                            <table class="table table-bordered mb-3">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>Earning</th>
-                                        <th>Title</th>
-                                        <th>Type</th>
-                                        <th>Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Basic Salary</td>
-                                        <td></td>
-                                        <td>Fixed</td>
-                                        <td>$50,000.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Allowance</td>
-                                        <td>Maioris Port</td>
-                                        <td>Fixed</td>
-                                        <td>$660.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Commission</td>
-                                        <td>Laborum Earum</td>
-                                        <td>Percentage</td>
-                                        <td>$4,200.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Other Payment</td>
-                                        <td>Voluptatem Ea</td>
-                                        <td>Percentage</td>
-                                        <td>$1,200.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Overtime</td>
-                                        <td>Dolor Quis</td>
-                                        <td></td>
-                                        <td>$2,000.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <table class="table table-bordered mb-3">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Earning</th>
+                                    <th>Title</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Basic Salary</td>
+                                    <td></td>
+                                    <td>Fixed</td>
+                                    <td>$50,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Allowance</td>
+                                    <td>Maioris Port</td>
+                                    <td>Fixed</td>
+                                    <td>$660.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Commission</td>
+                                    <td>Laborum Earum</td>
+                                    <td>Percentage</td>
+                                    <td>$4,200.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Other Payment</td>
+                                    <td>Voluptatem Ea</td>
+                                    <td>Percentage</td>
+                                    <td>$1,200.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Overtime</td>
+                                    <td>Dolor Quis</td>
+                                    <td></td>
+                                    <td>$2,000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
         
                         <!-- Deduction Table -->
-                        <div class="table-responsive"> <!-- Added responsiveness to the table -->
-                            <table class="table table-bordered mb-3">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>Deduction</th>
-                                        <th>Title</th>
-                                        <th>Type</th>
-                                        <th>Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Loan</td>
-                                        <td>Lorem Ipsum</td>
-                                        <td>Percentage</td>
-                                        <td>75% ($500.00)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Saturation Deduction</td>
-                                        <td>Exercitation</td>
-                                        <td>Fixed</td>
-                                        <td>$52.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <table class="table table-bordered mb-3">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Deduction</th>
+                                    <th>Title</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Loan</td>
+                                    <td>Lorem Ipsum</td>
+                                    <td>Percentage</td>
+                                    <td>75% ($500.00)</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturation Deduction</td>
+                                    <td>Exercitation</td>
+                                    <td>Fixed</td>
+                                    <td>$52.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
         
                         <!-- Summary -->
                         <div class="row mt-4">
-                            <div class="col-12 col-md-6"> <!-- Stack content for small screens -->
+                            <div class="col-md-6">
                                 <p>Initial Earnings: <strong>$55,000.00</strong></p>
                                 <p>Deduction Total: <strong>$552.00</strong></p>
                             </div>
-                            <div class="col-12 col-md-6 text-md-end text-start"> <!-- Stack text for small screens -->
+                            <div class="col-md-6 text-end">
                                 <p><strong>Net Salary: $54,448.00</strong></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
+          </div>
           <script>
               // Search Filter
               document.getElementById('searchInput').addEventListener('input', function () {

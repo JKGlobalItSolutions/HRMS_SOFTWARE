@@ -113,3 +113,12 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+.custom-logo {
+  display: none; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the custom logo when sidebar is active */
+.sidebar.active ~ .content .custom-logo {
+  display: block; /* Show the logo when sidebar is active */
+}

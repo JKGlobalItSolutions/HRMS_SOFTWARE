@@ -91,7 +91,7 @@
                 <div class="card h-100">
                   <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="card-title mb-0">Employee Salary</h5>
-                    <button class="btn btn-danger btn-sm">
+                    <button  class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#setSalaryModal">
                       <i class="bi bi-plus-lg"></i> <!-- Add icon -->
                     </button>
                   </div>
@@ -102,13 +102,13 @@
                   </div>
                 </div>
               </div>
-        
+          
               <!-- Allowance Table Panel -->
               <div class="col-12 col-lg-6">
                 <div class="card h-100">
                   <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="card-title mb-0">Allowance</h5>
-                    <button class="btn btn-danger btn-sm">
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#createAllowanceModal">
                       <i class="bi bi-plus-lg"></i> <!-- Add icon -->
                     </button>
                   </div>
@@ -133,10 +133,10 @@
                             <td>Fixed</td>
                             <td>₹1,482</td>
                             <td>
-                              <button class="btn btn-danger btn-sm me-2">
+                              <button class="btn btn-danger btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editAllowanceModal">
                                 <i class="bi bi-pencil-fill"></i>
                               </button>
-                              <button class="btn btn-danger btn-sm">
+                              <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteAllowanceModal">
                                 <i class="bi bi-trash-fill"></i>
                               </button>
                             </td>
@@ -148,10 +148,10 @@
                             <td>Fixed</td>
                             <td>₹542</td>
                             <td>
-                              <button class="btn btn-danger btn-sm me-2">
+                              <button class="btn btn-danger btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editAllowanceModal">
                                 <i class="bi bi-pencil-fill"></i>
                               </button>
-                              <button class="btn btn-danger btn-sm">
+                              <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteAllowanceModal">
                                 <i class="bi bi-trash-fill"></i>
                               </button>
                             </td>
@@ -163,152 +163,491 @@
                 </div>
               </div>
 
-              <!-- Other Payment Table Panel -->
-            <div class="col-12 col-lg-6">
-                <div class="card h-100">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="card-title mb-0">Other Payment</h5>
-                    <button class="btn btn-danger btn-sm">
-                    <i class="bi bi-plus-lg"></i> <!-- Add icon -->
-                    </button>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                    <table class="table table-bordered table-sm w-100">
-                        <thead class="table-light">
-                        <tr>
-                            <th>EMPLOYEE</th>
-                            <th>TITLE</th>
-                            <th>TYPE</th>
-                            <th>AMOUNT</th>
-                            <th>ACTION</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Elumalai</td>
-                            <td>Quia Occaecat Laboru</td>
-                            <td>Fixed</td>
-                            <td>₹3,484</td>
-                            <td>
-                            <button class="btn btn-danger btn-sm me-2">
-                                <i class="bi bi-pencil-fill"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm">
-                                <i class="bi bi-trash-fill"></i>
-                            </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Elumalai</td>
-                            <td>Deleniti Exercitatio</td>
-                            <td>Fixed</td>
-                            <td>₹574</td>
-                            <td>
-                            <button class="btn btn-danger btn-sm me-2">
-                                <i class="bi bi-pencil-fill"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm">
-                                <i class="bi bi-trash-fill"></i>
-                            </button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <!-- Overtime Table Panel -->
-            <div class="col-12 col-lg-6">
-                <div class="card h-100">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="card-title mb-0">Overtime</h5>
-                    <button class="btn btn-danger btn-sm">
-                    <i class="bi bi-plus-lg"></i> <!-- Add icon -->
-                    </button>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                    <table class="table table-bordered table-sm w-100">
-                        <thead class="table-light">
-                        <tr>
-                            <th>EMPLOYEE NAME</th>
-                            <th>OVERTIME TITLE</th>
-                            <th>NUMBER OF DAYS</th>
-                            <th>HOURS</th>
-                            <th>RATE</th>
-                            <th>ACTION</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Elumalai</td>
-                            <td>test</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>₹846</td>
-                            <td>
-                            <button class="btn btn-danger btn-sm me-2">
-                                <i class="bi bi-pencil-fill"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm">
-                                <i class="bi bi-trash-fill"></i>
-                            </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Elumalai</td>
-                            <td>Dolorem dolor rem no</td>
-                            <td>70</td>
-                            <td>78</td>
-                            <td>₹523</td>
-                            <td>
-                            <button class="btn btn-danger btn-sm me-2">
-                                <i class="bi bi-pencil-fill"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm">
-                                <i class="bi bi-trash-fill"></i>
-                            </button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    </div>
-                </div>
-                </div>
-            </div>
-  
-  
-            </div>
-          </div>
-          
-
-
-          <!-- Modal structure for delete confirmation start -->
-          <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                  <div class="modal-header custom-danger text-light">
-                      <h5 class="modal-title" id="deleteConfirmationLabel">Delete Employee</h5>
-                      <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- Other Payment Table Panel -->
+              <div class="col-12 col-lg-6">
+                  <div class="card h-100">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="card-title mb-0">Other Payment</h5>
+                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#createOtherPaymentModal">
+                        <i class="bi bi-plus-lg"></i> <!-- Add icon -->
+                      </button>
                   </div>
-                  <div class="modal-body">
-                      <p>Are you sure you want to delete this employee's details?</p>
-                      <div class="d-flex justify-content-end">
-                      <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">No</button>
-                      <button type="button" class="btn custom-danger" data-bs-dismiss="modal">Yes</button>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                      <table class="table table-bordered table-sm w-100">
+                          <thead class="table-light">
+                          <tr>
+                              <th>EMPLOYEE</th>
+                              <th>TITLE</th>
+                              <th>TYPE</th>
+                              <th>AMOUNT</th>
+                              <th>ACTION</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td>Elumalai</td>
+                              <td>Quia Occaecat Laboru</td>
+                              <td>Fixed</td>
+                              <td>₹3,484</td>
+                              <td>
+                              <button class="btn btn-danger btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editOtherPaymentModal">
+                                <i class="bi bi-pencil-fill"></i>
+                              </button>
+                              <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteOtherPaymentModal">
+                                <i class="bi bi-trash-fill"></i>
+                              </button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Elumalai</td>
+                              <td>Deleniti Exercitatio</td>
+                              <td>Fixed</td>
+                              <td>₹574</td>
+                              <td>
+                              <button class="btn btn-danger btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editOtherPaymentModal">
+                                <i class="bi bi-pencil-fill"></i>
+                              </button>
+                              <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteOtherPaymentModal">
+                                <i class="bi bi-trash-fill"></i>
+                              </button>
+                              </td>
+                          </tr>
+                          </tbody>
+                      </table>
                       </div>
-                  </div>
-                  <div class="modal-footer" id="confirmSection" style="display:none;">
-                      <p class="me-auto text-danger">Click Confirm to proceed with deletion.</p>
-                      <button type="button" class="btn custom-danger" data-bs-dismiss="modal">Confirm</button>
                   </div>
                   </div>
               </div>
+
+              <!-- Overtime Table Panel -->
+              <div class="col-12 col-lg-6">
+                  <div class="card h-100">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="card-title mb-0">Overtime</h5>
+                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#createOvertimeModal">
+                        <i class="bi bi-plus-lg"></i> <!-- Add icon -->
+                      </button>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                      <table class="table table-bordered table-sm w-100">
+                          <thead class="table-light">
+                          <tr>
+                              <th>EMPLOYEE NAME</th>
+                              <th>OVERTIME TITLE</th>
+                              <th>NUMBER OF DAYS</th>
+                              <th>HOURS</th>
+                              <th>RATE</th>
+                              <th>ACTION</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td>Elumalai</td>
+                              <td>test</td>
+                              <td>10</td>
+                              <td>10</td>
+                              <td>₹846</td>
+                              <td>
+                              <button class="btn btn-danger btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editOvertimeModal">
+                                <i class="bi bi-pencil-fill"></i>
+                              </button>
+                              <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteOvertimeModal">
+                                <i class="bi bi-trash-fill"></i>
+                              </button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Elumalai</td>
+                              <td>Dolorem dolor rem no</td>
+                              <td>70</td>
+                              <td>78</td>
+                              <td>₹523</td>
+                              <td>
+                              <button class="btn btn-danger btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editOvertimeModal">
+                                <i class="bi bi-pencil-fill"></i>
+                              </button>
+                              <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteOvertimeModal">
+                                <i class="bi bi-trash-fill"></i>
+                              </button>
+                              </td>
+                          </tr>
+                          </tbody>
+                      </table>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
           </div>
-          <!-- Modal structure for delete confirmation delete -->
+          
+          <!-- pop up form starts -->
+            <!-- Modal structure for Set Basic Salary -->
+            <div class="modal fade" id="setSalaryModal" tabindex="-1" aria-labelledby="setSalaryLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="setSalaryLabel">Set Basic Salary</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <!-- Payslip Type Selection -->
+                      <div class="mb-3">
+                        <label for="payslipType" class="form-label">Payslip Type*</label>
+                        <select class="form-select" id="payslipType">
+                          <option selected>Select Payslip Type</option>
+                          <option value="monthly">Hourly Payslip</option>
+                          <option value="monthly">Monthly Payslip</option>
+                          <!-- Add more payslip type options if needed -->
+                        </select>
+                      </div>
+
+                      <!-- Salary Input -->
+                      <div class="mb-3">
+                        <label for="salaryAmount" class="form-label">Salary</label>
+                        <input type="number" class="form-control" id="salaryAmount" placeholder="Enter salary amount">
+                      </div>
+
+                      <!-- From Account Selection -->
+                      <div class="mb-3">
+                        <label for="fromAccount" class="form-label">From Account*</label>
+                        <select class="form-select" id="fromAccount">
+                          <option selected>Select Account</option>
+                          <option value="1">Benjamin Adams</option>
+                          <option value="2">John Doe</option>
+                          <!-- Add more account options as needed -->
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal structure for Create Allowance -->
+            <div class="modal fade" id="createAllowanceModal" tabindex="-1" aria-labelledby="createAllowanceLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="createAllowanceLabel">Create Allowance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <!-- Allowance Options -->
+                      <div class="mb-3">
+                        <label for="allowanceOptions" class="form-label">Allowance Options*</label>
+                        <select class="form-select" id="allowanceOptions">
+                          <option selected>Select Allowance Option</option>
+                          <option value="housing">Housing Allowance</option>
+                          <option value="transport">Transport Allowance</option>
+                          <!-- Add more options as needed -->
+                        </select>
+                      </div>
+
+                      <!-- Title Input -->
+                      <div class="mb-3">
+                        <label for="allowanceTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="allowanceTitle" placeholder="Enter Title">
+                      </div>
+
+                      <!-- Type Selection -->
+                      <div class="mb-3">
+                        <label for="allowanceType" class="form-label">Type</label>
+                        <select class="form-select" id="allowanceType">
+                          <option value="fixed" selected>Fixed</option>
+                          <option value="variable">Prcentage</option>
+                        </select>
+                      </div>
+
+                      <!-- Amount Input -->
+                      <div class="mb-3">
+                        <label for="allowanceAmount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="allowanceAmount" placeholder="Enter Amount">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Create</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal structure for Edit Allowance -->
+            <div class="modal fade" id="editAllowanceModal" tabindex="-1" aria-labelledby="editAllowanceLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="editAllowanceLabel">Edit Allowance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <!-- Allowance Options -->
+                      <div class="mb-3">
+                        <label for="allowanceOptions" class="form-label">Allowance Options*</label>
+                        <select class="form-select" id="allowanceOptions">
+                          <option selected>Select Allowance Option</option>
+                          <option value="housing">Housing Allowance</option>
+                          <option value="transport">Transport Allowance</option>
+                          <!-- Add more options as needed -->
+                        </select>
+                      </div>
+
+                      <!-- Title Input -->
+                      <div class="mb-3">
+                        <label for="allowanceTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="allowanceTitle" placeholder="Enter Title">
+                      </div>
+
+                      <!-- Type Selection -->
+                      <div class="mb-3">
+                        <label for="allowanceType" class="form-label">Type</label>
+                        <select class="form-select" id="allowanceType">
+                          <option value="fixed" selected>Fixed</option>
+                          <option value="variable">Variable</option>
+                        </select>
+                      </div>
+
+                      <!-- Amount Input -->
+                      <div class="mb-3">
+                        <label for="allowanceAmount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="allowanceAmount" placeholder="Enter Amount">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Save Changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal structure for Allowance Delete Confirmation -->
+            <div class="modal fade" id="deleteAllowanceModal" tabindex="-1" aria-labelledby="deleteAllowanceLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header bg-danger text-light">
+                    <h5 class="modal-title" id="deleteAllowanceLabel">Allowance Delete Confirmation</h5>
+                    <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Are you sure you want to delete this allowance?</p>
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">No</button>
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Yes, Delete</button>
+                    </div>
+                  </div>
+                  <div class="modal-footer" id="confirmSection" style="display:none;">
+                    <p class="me-auto text-danger">Click Confirm to proceed with deletion.</p>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal structure for Create Other Payment -->
+            <div class="modal fade" id="createOtherPaymentModal" tabindex="-1" aria-labelledby="createOtherPaymentLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="createOtherPaymentLabel">Create Other Payment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <!-- Title Input -->
+                      <div class="mb-3">
+                        <label for="paymentTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="paymentTitle" placeholder="Enter Title">
+                      </div>
+
+                      <!-- Type and Amount Input in one row -->
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="paymentType" class="form-label">Type</label>
+                          <select class="form-select" id="paymentType">
+                            <option value="fixed" selected>Fixed</option>
+                            <option value="variable">Prcentage</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="paymentAmount" class="form-label">Amount</label>
+                          <input type="number" class="form-control" id="paymentAmount" placeholder="Enter Amount">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Create</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal structure for Edit Other Payment -->
+            <div class="modal fade" id="editOtherPaymentModal" tabindex="-1" aria-labelledby="editOtherPaymentLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="editOtherPaymentLabel">Edit Other Payment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <!-- Title Input -->
+                      <div class="mb-3">
+                        <label for="editPaymentTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="editPaymentTitle" value="Pre-filled Payment Title">
+                      </div>
+
+                      <!-- Type and Amount Input in one row -->
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="editPaymentType" class="form-label">Type</label>
+                          <select class="form-select" id="editPaymentType">
+                            <option value="fixed" selected>Fixed</option>
+                            <option value="variable">Percentage</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="editPaymentAmount" class="form-label">Amount</label>
+                          <input type="number" class="form-control" id="editPaymentAmount" value="Pre-filled Amount">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal structure for Delete Other Payment Confirmation -->
+            <div class="modal fade" id="deleteOtherPaymentModal" tabindex="-1" aria-labelledby="deleteOtherPaymentLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header bg-danger text-light">
+                    <h5 class="modal-title" id="deleteOtherPaymentLabel">Delete Other Payment Confirmation</h5>
+                    <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Are you sure you want to delete this payment?</p>
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">No</button>
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Yes, Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal structure for Create Overtime -->
+            <div class="modal fade" id="createOvertimeModal" tabindex="-1" aria-labelledby="createOvertimeLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="createOvertimeLabel">Create Overtime</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <!-- Overtime Title Input -->
+                      <div class="mb-3">
+                        <label for="overtimeTitle" class="form-label">Overtime Title*</label>
+                        <input type="text" class="form-control" id="overtimeTitle" placeholder="Enter Title">
+                      </div>
+
+                      <!-- Number of Days, Hours, and Rate in one row -->
+                      <div class="row mb-3">
+                        <div class="col-md-4">
+                          <label for="numberOfDays" class="form-label">Number of Days</label>
+                          <input type="number" class="form-control" id="numberOfDays" placeholder="Enter Days">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="hours" class="form-label">Hours</label>
+                          <input type="number" class="form-control" id="hours" placeholder="Enter Hours">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="rate" class="form-label">Rate</label>
+                          <input type="number" class="form-control" id="rate" placeholder="Enter Rate">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Create</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal structure for Edit Overtime -->
+            <div class="modal fade" id="editOvertimeModal" tabindex="-1" aria-labelledby="editOvertimeLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="editOvertimeLabel">Edit Overtime</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="editOvertimeTitle" class="form-label">Overtime Title*</label>
+                        <input type="text" class="form-control" id="editOvertimeTitle" value="Overtime A">
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-md-4">
+                          <label for="editNumberOfDays" class="form-label">Number of Days</label>
+                          <input type="number" class="form-control" id="editNumberOfDays" value="5">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="editHours" class="form-label">Hours</label>
+                          <input type="number" class="form-control" id="editHours" value="8">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="editRate" class="form-label">Rate</label>
+                          <input type="number" class="form-control" id="editRate" value="15">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Save Changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal structure for Delete Overtime Confirmation -->
+            <div class="modal fade" id="deleteOvertimeModal" tabindex="-1" aria-labelledby="deleteOvertimeLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header custom-danger text-light">
+                    <h5 class="modal-title" id="deleteOvertimeLabel">Delete Overtime</h5>
+                    <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Are you sure you want to delete this overtime entry?</p>
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">No</button>
+                      <button type="button" class="btn custom-danger" data-bs-dismiss="modal">Yes</button>
+                    </div>
+                  </div>
+                  <div class="modal-footer" id="confirmSection" style="display:none;">
+                    <p class="me-auto text-danger">Click Confirm to proceed with deletion.</p>
+                    <button type="button" class="btn custom-danger" data-bs-dismiss="modal">Confirm</button>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- pop up form end  -->
+
           <script>
             document.getElementById('searchInput').addEventListener('input', function () {
               let filter = this.value.toLowerCase();
